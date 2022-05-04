@@ -12,17 +12,19 @@ Python requirements can be configured in the Dockerfile, right now the main requ
 ## How to use
 
 ### From python
-Create your python script in the `py` folder. The idea is for you to print and HTML file, which will then be converted by Pandoc
-```
-./python.sh filename
+Create your python script in the `py` folder. The idea is for you to print HTML, which will then be converted by Pandoc.
+
+An example is given through the `py/test.py` script, you then have to add the webscrapper logic as you see fit.
+```sh
+./python.sh 'filename'
 ```
 
 The result will be in the `epub` folder, under the same name of the file.
 
 ### From Ready-made HTML file
 If you already have an HTML file that you made in another way, just put it in the `html` folder, and run the command below.
-```
-./pandoc.sh filename
+```sh
+./pandoc.sh 'filename'
 ```
 
 The result will be in the `epub` folder, under the same name of the file.
@@ -40,7 +42,7 @@ If you already have the HTML, you start from step 3.
 
 I'm not a python programmer (just did out of necessity), so I'm unsure how things are usually done professionally. So I made the `test-python.sh` to see how things return. Of course, most Linux systems (Or Windows under WSL2) have Python3 natively, so in that regard, you should be able to debug it natively.
 
-All the scripts do is to ease and organize a way to run the scripts and convert files going from script to epub.
+All of what the scripts do are to ease and organize a way to run the scripts and convert files going from script to epub.
 
 Some websites have protections, so you may need another solution (front-end), where you will aim for a straight HTML response, you then save that into a file and just use the 2nd part of this script to convert into an EPUB.
 

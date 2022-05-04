@@ -4,5 +4,7 @@
 !Dockerfile
 !docker-compose.yml
 !README.md
+!test-python.sh
 !.gitignore
 !*/.gitignore
+!py/test.py
