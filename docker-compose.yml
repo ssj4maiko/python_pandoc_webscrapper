@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+    # Serviço de proxy
+    python:
+        build: ./
+        #restart: unless-stopped
+        working_dir: /app
+        volumes:
+            - ./:/app
+        #entrypoint: npm run dev
+    pandoc:
+        image: pandoc/latex
+        #restart: unless-stopped
+        working_dir: /app
+        volumes:
+            - ./:/app
+        entrypoint: sh shell-run-for-pandoc.sh

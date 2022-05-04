@@ -1,0 +1,8 @@
+*
+!pandoc.sh
+!python.sh
+!Dockerfile
+!docker-compose.yml
+!README.md
+!.gitignore
+!*/.gitignore
