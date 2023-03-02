@@ -8,11 +8,10 @@ services:
         working_dir: /app
         volumes:
             - ./:/app
-        #entrypoint: npm run dev
     pandoc:
         image: pandoc/latex
         #restart: unless-stopped
         working_dir: /app
         volumes:
             - ./:/app
-        entrypoint: sh shell-run-for-pandoc.sh
+        entrypoint: sh ./scripts/shell-run-for-pandoc.sh
